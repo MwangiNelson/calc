@@ -3,7 +3,7 @@ const INPUT_FIELD = document.getElementById('input-field')
 const OPERANDS = document.getElementsByClassName('math_keys')
 const OPERAND_CONTAINER = document.getElementById('operation_container')
 const EQUALS = document.getElementById('equals')
-
+const CLEAR = document.getElementById('clear')
 
 
 let btn_array = Array.from(KEYS)
@@ -33,9 +33,14 @@ operands_array.forEach(operand=>{
 
 EQUALS.addEventListener('click',()=>{
     let ans = calculate(stored_values)
+    clear();
     INPUT_FIELD.value = ans
-    OPERAND_CONTAINER.innerHTML = ''
-    stored_values.length = 0
+    console.log(stored_values)
+})
+
+CLEAR.addEventListener('click',()=>{
+    clear()
+    console.log(stored_values)
 })
 
 function calculate(values){
@@ -45,4 +50,9 @@ function calculate(values){
     let ans = eval(value_start+operator+INPUT_FIELD.value)
     console.log(ans)
     return ans
+}
+function clear(){
+    stored_values.length = 0
+    INPUT_FIELD.value = 0
+    OPERAND_CONTAINER.innerHTML = ''
 }
