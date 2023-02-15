@@ -76,6 +76,10 @@ button {
   padding: 1em;
   font-size: 3em;
 }
+#equals{
+    grid-row: span 4/9;
+    grid-column: span 1/4;
+}
 #operation_container {
   color: white;
   position: absolute;
@@ -87,4 +91,7 @@ button {
   transform: translateY(-100%);
   font-size: 1.25em;
     border-radius: 0px 4px 0px 0px;
+}
+.ce{
+    grid-column: span 2;
 }
