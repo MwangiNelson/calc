@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+* {
+  font-family:monospace;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.calc-body {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(8, 7, 7);
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.input-area {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.input-area input {
+  width: 100%;
+  padding: 0.5em 0.75em;
+  font-size: 3em;
+  text-align: end;
+  border: none;
+  background-color: rgb(31, 27, 27);
+  color: white;
+  border-radius: 0;
+  outline: none;
+}
+input:focus {
+  background-color: rgb(20, 16, 16);
+}
+.buttons-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(2vw, 1fr));
+}
+button {
+  padding: 1em;
+  font-size: 3vh;
+  width: 100%;
+}
+.options {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.calc-header {
+  color: white;
+  font-size: 3vh;
+}
+.operator {
+  color: white;
+  padding: 1em;
+  font-size: 3em;
+}
+#operation_container {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  background-color: rgb(148, 150, 149);
+  padding: 0.5em 0.75em;
+  transform: translateY(-100%);
+  font-size: 1.25em;
+    border-radius: 0px 4px 0px 0px;
+}
