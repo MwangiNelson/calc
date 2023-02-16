@@ -53,6 +53,6 @@ function calculate(values){
 }
 function clear(){
     stored_values.length = 0
-    INPUT_FIELD.value = 0
+    INPUT_FIELD.value = ''
     OPERAND_CONTAINER.innerHTML = ''
 }
